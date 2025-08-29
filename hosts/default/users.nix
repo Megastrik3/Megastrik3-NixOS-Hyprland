@@ -26,6 +26,13 @@ in
 
     # define user packages here
     packages = with pkgs; [
+      vscode
+      youtube-music
+      okular
+      gimp
+      prismlauncher
+      bitwarden-desktop
+      
       ];
     };
     

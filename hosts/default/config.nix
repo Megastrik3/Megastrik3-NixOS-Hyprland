@@ -74,6 +74,9 @@
     # Bootloader GRUB theme, configure below
 
     ## -end of BOOTLOADERS----- ##
+
+    services.bpftune.enable = true;
+    programs.bcc.enable = true;
   
     # Make /tmp a tmpfs
     tmp = {
@@ -112,7 +115,7 @@
     };
   };
   vm.guest-services.enable = false;
-  local.hardware-clock.enable = false;
+  local.hardware-clock.enable = true;
 
   # networking
   networking = {
@@ -308,6 +311,37 @@
     '';
   };
 
+
+  security = {
+    rtkit.enable = true;
+    polkit.enable = true;
+    polkit.extraConfig = ''
+     polkit.addRule(function(action, subject) {
+       if (
+         subject.isInGroup("users")
+           && (
+             action.id == "org.freedesktop.login1.reboot" ||
+             action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
+             action.id == "org.freedesktop.login1.power-off" ||
+             action.id == "org.freedesktop.login1.power-off-multiple-sessions"
+           )
+         )
+       {
+         return polkit.Result.YES;
+       }
+    })
+  '';
+    sudo.wheelNeedsPassword = false;
+    pam.services = {
+      login.kwallet.enable = true;
+      gdm.kwallet.enable = true;
+      gdm-password.kwallet.enable = true;
+      hyprlock = { };
+      # Unlock GNOME Keyring on login for GVFS credentials
+      login.enableGnomeKeyring = true;
+      gdm-password.enableGnomeKeyring = true;
+    };
+  };
   # Cachix, Optimization settings and garbage collection automation
   nix = {
     settings = {
@@ -358,5 +392,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 }

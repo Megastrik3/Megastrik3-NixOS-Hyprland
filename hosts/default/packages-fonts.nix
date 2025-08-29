@@ -3,13 +3,14 @@
 
 { pkgs, inputs, ...}: let
 
-  python-packages = pkgs.python3.withPackages (
+  python-packages = pkgs.python312.withPackages (  # <-- Changed from python3 to python312
     ps:
       with ps; [
         requests
         pyquery # needed for hyprland-dots Weather script
-        ]
-    );
+        i3ipc   # Make sure i3ipc is also listed here if needed explicitly
+      ]
+  );
 
   in {
 
@@ -136,12 +137,12 @@ fonts = {
 	
     virt-manager.enable = false;
     
-    #steam = {
-    #  enable = true;
-    #  gamescopeSession.enable = true;
-    #  remotePlay.openFirewall = true;
-    #  dedicatedServer.openFirewall = true;
-    #};
+    steam = {
+     enable = true;
+     gamescopeSession.enable = true;
+     remotePlay.openFirewall = true;
+     dedicatedServer.openFirewall = true;
+    };
     
     xwayland.enable = true;
 

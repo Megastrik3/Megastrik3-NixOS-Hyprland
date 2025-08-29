@@ -71,7 +71,7 @@ fi
 echo "-----"
 
 echo "$NOTE Cloning & Entering NixOS-Hyprland Repository"
-git clone --depth 1 https://github.com/JaKooLit/NixOS-Hyprland.git ~/NixOS-Hyprland
+git clone --depth 1 https://github.com/Megastrik3/Megastrik3-NixOS-Hyprland.git ~/NixOS-Hyprland
 cd ~/NixOS-Hyprland || exit
 
 printf "\n%.0s" {1..2}
@@ -157,8 +157,8 @@ done
 echo "-----"
 
 echo "$NOTE Setting Required Nix Settings Then Going To Install"
-git config --global user.name "installer"
-git config --global user.email "installer@gmail.com"
+git config --global user.name "megastrik3"
+git config --global user.email "megastrik3@gmail.com"
 git add .
 sed -i 's/host\s*=\s*"\([^"]*\)"/host = "'"$hostName"'"/' ./flake.nix
 
