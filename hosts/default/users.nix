@@ -32,7 +32,11 @@ in
       gimp
       prismlauncher
       bitwarden-desktop
-      
+      vesktop
+      solaar
+      zotero
+      termius
+      obsidian
       ];
     };
     
