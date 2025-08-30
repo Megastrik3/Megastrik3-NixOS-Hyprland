@@ -28,7 +28,7 @@ in
     packages = with pkgs; [
       vscode
       youtube-music
-      okular
+      # okular
       gimp
       prismlauncher
       bitwarden-desktop
