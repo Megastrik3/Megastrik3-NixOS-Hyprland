@@ -153,9 +153,10 @@
         layout = "${keyboardLayout}";
         variant = "";
       };
-    bpftune.enable = true;
     };
     
+    bpftune.enable = true;
+
     greetd = {
       enable = true;
       settings = {
