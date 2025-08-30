@@ -35,7 +35,7 @@ in
       vesktop
       solaar
       zotero
-      termius
+      # termius
       obsidian
       ];
     };
