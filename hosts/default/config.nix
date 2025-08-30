@@ -75,7 +75,7 @@
 
     ## -end of BOOTLOADERS----- ##
 
-    services.bpftune.enable = true;
+
   
     # Make /tmp a tmpfs
     tmp = {
@@ -153,6 +153,7 @@
         layout = "${keyboardLayout}";
         variant = "";
       };
+    bpftune.enable = true;
     };
     
     greetd = {
