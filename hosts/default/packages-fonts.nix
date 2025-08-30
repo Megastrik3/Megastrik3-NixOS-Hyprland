@@ -116,10 +116,9 @@ fonts = {
      	  
         portalPackage = pkgs.xdg-desktop-portal-hyprland; # xdph none git
   	  xwayland.enable = true;
-    bcc.enable = true;
     };
 
-	
+    bcc.enable=true;
 	  waybar.enable = true;
 	  hyprlock.enable = true;
 	  firefox.enable = true;
