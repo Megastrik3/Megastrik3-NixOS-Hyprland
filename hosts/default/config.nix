@@ -76,7 +76,6 @@
     ## -end of BOOTLOADERS----- ##
 
     services.bpftune.enable = true;
-    programs.bcc.enable = true;
   
     # Make /tmp a tmpfs
     tmp = {
