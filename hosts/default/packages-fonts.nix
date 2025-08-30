@@ -8,7 +8,7 @@
       with ps; [
         requests
         pyquery # needed for hyprland-dots Weather script
-        i3ipc   # Make sure i3ipc is also listed here if needed explicitly
+       # i3ipc   # Make sure i3ipc is also listed here if needed explicitly
       ]
   );
 
