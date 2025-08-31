@@ -14,6 +14,7 @@
     ./hardware.nix
     ./users.nix
     ./packages-fonts.nix
+    ./sddm.nix
     ../../modules/amd-drivers.nix
     ../../modules/nvidia-drivers.nix
     ../../modules/nvidia-prime-drivers.nix
@@ -144,7 +145,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-
   # Services to start
   services = {
     xserver = {
@@ -158,7 +158,7 @@
     bpftune.enable = true;
 
     greetd = {
-      enable = true;
+      enable = false;
       settings = {
         default_session = {
           user = username;
@@ -166,7 +166,8 @@
         };
       };
     };
-    
+
+
     smartd = {
       enable = false;
       autodetect = true;
@@ -199,7 +200,7 @@
     nfs.server.enable = false;
   
     openssh.enable = true;
-    flatpak.enable = false;
+    flatpak.enable = true;
 	
   	blueman.enable = true;
   	

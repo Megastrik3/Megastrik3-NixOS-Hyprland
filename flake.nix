@@ -13,7 +13,7 @@
     inputs@{ self, nixpkgs, ... }:
     let
       system = "x86_64-linux";
-      host = "NixOS-Hyprland";
+      host = "default";
       username = "hudsonb";
 
       pkgs = import nixpkgs {
