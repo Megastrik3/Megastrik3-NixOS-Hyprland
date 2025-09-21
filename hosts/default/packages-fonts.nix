@@ -85,6 +85,10 @@
     yad
     yt-dlp
 
+    devenv
+    R
+    solaar
+    opentabletdriver
     #waybar  # if wanted experimental next line
     #(pkgs.waybar.overrideAttrs (oldAttrs: { mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];}))
   ]) ++ [

@@ -28,15 +28,17 @@ in
     packages = with pkgs; [
       vscode
       youtube-music
-      # okular
       gimp
       prismlauncher
       bitwarden-desktop
       vesktop
-      solaar
       zotero
-      # termius
+#      termius
       obsidian
+      siril
+      cura-appimage
+      darktable
+      
       ];
     };
     

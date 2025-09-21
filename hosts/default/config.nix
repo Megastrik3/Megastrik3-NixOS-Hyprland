@@ -266,8 +266,8 @@
 
   # Extra Logitech Support
   hardware = { 
-     logitech.wireless.enable = false;
-     logitech.wireless.enableGraphical = false;
+     logitech.wireless.enable = true;
+     logitech.wireless.enableGraphical = true;
   }; 
 
   services.pulseaudio.enable = false; # stable branch
@@ -368,6 +368,12 @@
     enable = false;
     dockerCompat = false;
     defaultNetwork.settings.dns_enabled = false;
+  };
+
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+    blacklistedKernelModules = ["hid-uclogic""wacom"];
   };
 
   # OpenGL
