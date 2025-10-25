@@ -386,7 +386,14 @@
   };
 
   # Virtualization / Containers
-  virtualisation.libvirtd.enable = false;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      swtpm.enable = true;
+    };
+  };
   virtualisation.podman = {
     enable = false;
     dockerCompat = false;
