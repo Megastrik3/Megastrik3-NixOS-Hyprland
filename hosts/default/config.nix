@@ -107,7 +107,7 @@
   drivers = {
     amdgpu.enable = true;
     intel.enable = true;
-    nvidia.enable = false;
+    nvidia.enable = true;
     nvidia-prime = {
        enable = false;
          intelBusID = "";
@@ -212,6 +212,28 @@
 	  upower.enable = true;
     
     gnome.gnome-keyring.enable = true;
+
+    tailscale.enable = true;
+    tailscale.useRoutingFeatures = "client";
+
+    syncthing = {
+      enable = true;
+      openDefaultPorts = false;
+      overrideDevices = false;
+      overrideFolders = false;
+      guiAddress = "127.0.0.1:8384";
+      # Optional: GUI credentials (can be set in the browser instead)
+      extraOptions.gui =
+        {
+          user = "centari";
+          password = "password";
+          apikey = "197920b7c60142f1a837ed26dc916c3255c243b90200e0bcec98d6e80683bb4b";
+        };
+      settings = {
+        options.relaysEnabled = false;
+        options.urAccepted = -1;
+      };
+    };
     
     #printing = {
     #  enable = false;
@@ -354,6 +376,7 @@
       ];
       substituters = [ "https://hyprland.cachix.org" ];
       trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+      trusted-users = [ "root" "${username}" ];
     };
     gc = {
       automatic = true;

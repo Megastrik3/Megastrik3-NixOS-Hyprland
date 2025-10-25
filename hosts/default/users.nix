@@ -38,6 +38,10 @@ in
       siril
       cura-appimage
       darktable
+      davinci-resolve
+      handbrake
+      r2modman
+
       
       ];
     };

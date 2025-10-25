@@ -25,6 +25,17 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
+    fileSystems."/home/hudsonb/SSD_Drive" =
+      {
+        device = "/dev/disk/by-uuid/2453FDDB351A8F72";
+        fsType = "ntfs";
+        options = [
+          "users"
+          "nofail"
+          "exec"
+        ];
+      };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/ccfbd7b2-86a6-476f-a0d7-21e7d1916732"; }
     ];

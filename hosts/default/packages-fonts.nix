@@ -72,7 +72,8 @@
     kdePackages.qt6ct
     kdePackages.qtwayland
     kdePackages.qtstyleplugin-kvantum #kvantum
-    rofi-wayland
+    #rofi-wayland
+    rofi
     slurp
     swappy
     swaynotificationcenter
@@ -89,6 +90,11 @@
     R
     solaar
     opentabletdriver
+    syncthingtray
+    trayscale
+    mediawriter
+
+
     #waybar  # if wanted experimental next line
     #(pkgs.waybar.overrideAttrs (oldAttrs: { mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];}))
   ]) ++ [
@@ -121,6 +127,8 @@ fonts = {
         portalPackage = pkgs.xdg-desktop-portal-hyprland; # xdph none git
   	  xwayland.enable = true;
     };
+
+    direnv.enable = true;
 
     bcc.enable=true;
 	  waybar.enable = true;
