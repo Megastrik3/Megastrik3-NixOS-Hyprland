@@ -41,8 +41,8 @@ in
       davinci-resolve
       handbrake
       r2modman
-
-      
+      obs-studio
+      audacity      
       ];
     };
     
