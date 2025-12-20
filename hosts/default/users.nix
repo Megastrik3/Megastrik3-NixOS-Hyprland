@@ -1,7 +1,7 @@
 # 💫 https://github.com/JaKooLit 💫 #
 # Users - NOTE: Packages defined on this will be on current user only
 
-{ pkgs, username, ... }:
+{ pkgs, username, pkgs-cuda, ... }:
 
 let
   inherit (import ./variables.nix) gitUsername;
@@ -22,7 +22,9 @@ in
         "video" 
         "input" 
         "audio"
+        "adbusers" # for adb access
       ];
+
 
     # define user packages here
     packages = with pkgs; [
@@ -33,16 +35,18 @@ in
       bitwarden-desktop
       vesktop
       zotero
-#      termius
+      termius
       obsidian
       siril
       cura-appimage
       darktable
-      davinci-resolve
+      #davinci-resolve
+      pkgs-cuda.davinci-resolve # <-- ADDED
       handbrake
       r2modman
       obs-studio
-      audacity      
+      audacity     
+      zoom-us 
       ];
     };
     

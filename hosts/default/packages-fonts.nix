@@ -15,7 +15,8 @@
   in {
 
   nixpkgs.config.allowUnfree = true;
-  
+  nixpkgs.config.android_sdk.accept_license = true;
+
   environment.systemPackages = (with pkgs; [
   # System Packages
     bc
@@ -88,12 +89,13 @@
 
     devenv
     R
-    solaar
+    logitech-udev-rules
     opentabletdriver
     syncthingtray
     trayscale
     mediawriter
     gnome-boxes
+    android-studio-full
 
     #waybar  # if wanted experimental next line
     #(pkgs.waybar.overrideAttrs (oldAttrs: { mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];}))
@@ -128,6 +130,7 @@ fonts = {
   	  xwayland.enable = true;
     };
 
+    adb.enable = true;
     direnv.enable = true;
 
     bcc.enable=true;

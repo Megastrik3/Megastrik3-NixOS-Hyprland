@@ -22,6 +22,19 @@
           allowUnfree = true;
         };
       };
+
+      # === ADDED ===
+      # Create a separate pkgs instance specifically for CUDA packages.
+      # This avoids rebuilding your entire system with cudaSupport = true.
+      pkgs-cuda = import nixpkgs {
+        inherit system;
+        config = {
+          allowUnfree = true;
+          cudaSupport = true;
+        };
+      };
+      # === END ADDED ===
+
     in
     {
       nixosConfigurations = {
@@ -31,6 +44,7 @@
             inherit inputs;
             inherit username;
             inherit host;
+            inherit pkgs-cuda; # <-- Pass the CUDA-enabled pkgs instance here
           };
           modules = [
             ./hosts/${host}/config.nix

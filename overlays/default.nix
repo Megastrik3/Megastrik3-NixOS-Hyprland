@@ -10,4 +10,11 @@ final: prev: {
       });
     })
   ];
+
+  # ADD THIS PART:
+  # This tells the 32-bit package set (pkgs-i686-linux)
+  # to build without CUDA support, preventing the error.
+  pkgs-i686-linux = prev.pkgs-i686-linux.override {
+    cudaSupport = false;
+  };
 }
