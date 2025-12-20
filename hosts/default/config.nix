@@ -215,6 +215,7 @@
 
     tailscale.enable = true;
     tailscale.useRoutingFeatures = "client";
+    tailscale.extraDaemonFlags = ["--no-logs-no-support"];
 
     syncthing = {
       enable = true;

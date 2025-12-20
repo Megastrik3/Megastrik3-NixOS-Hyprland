@@ -38,7 +38,6 @@ in
       termius
       obsidian
       siril
-      cura-appimage
       darktable
       #davinci-resolve
       pkgs-cuda.davinci-resolve # <-- ADDED
@@ -47,6 +46,10 @@ in
       obs-studio
       audacity     
       zoom-us 
+      antigravity
+      openjdk17
+      aapt
+
       ];
     };
     
