@@ -56,6 +56,8 @@
     grim
     gtk-engine-murrine #for gtk themes
     hypridle
+    hyprpaper
+    mpvpaper
     imagemagick 
     inxi
     jq
@@ -96,6 +98,7 @@
     mediawriter
     gnome-boxes
     android-studio-full
+    waytrogen
 
     #waybar  # if wanted experimental next line
     #(pkgs.waybar.overrideAttrs (oldAttrs: { mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];}))

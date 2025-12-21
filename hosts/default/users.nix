@@ -5,6 +5,7 @@
 
 let
   inherit (import ./variables.nix) gitUsername;
+  hyprlandScripts = import ./scripts { inherit pkgs; };
 in
 {
   users = { 
@@ -22,12 +23,11 @@ in
         "video" 
         "input" 
         "audio"
-        "adbusers" # for adb access
+        "adbusers" 
       ];
 
-
     # define user packages here
-    packages = with pkgs; [
+    packages = (with pkgs; [
       vscode
       youtube-music
       gimp
@@ -40,7 +40,7 @@ in
       siril
       darktable
       #davinci-resolve
-      pkgs-cuda.davinci-resolve # <-- ADDED
+      pkgs-cuda.davinci-resolve
       handbrake
       r2modman
       obs-studio
@@ -49,8 +49,7 @@ in
       antigravity
       openjdk17
       aapt
-
-      ];
+    ]) ++ hyprlandScripts;
     };
     
     defaultUserShell = pkgs.zsh;
@@ -61,25 +60,21 @@ in
     
   programs = {
   # Zsh configuration
-	  zsh = {
-    	enable = true;
-	  	enableCompletion = true;
+    zsh = {
+      enable = true;
+      enableCompletion = true;
       ohMyZsh = {
         enable = true;
         plugins = ["git"];
         theme = "agnoster"; 
-      	};
+        };
       
       autosuggestions.enable = true;
       syntaxHighlighting.enable = true;
       
       promptInit = ''
         fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
-
-        #pokemon colorscripts like. Make sure to install krabby package
-        #krabby random --no-mega --no-gmax --no-regional --no-title -s; 
-
-        # Set-up icons for files/directories in terminal using lsd
+        
         alias ls='lsd'
         alias l='ls -l'
         alias la='ls -a'
