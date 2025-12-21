@@ -6,6 +6,7 @@
 let
   inherit (import ./variables.nix) gitUsername;
   hyprlandScripts = import ./scripts { inherit pkgs; };
+  hyprlandUserScripts = import ./userscripts { inherit pkgs; };
 in
 {
   users = { 
@@ -49,7 +50,7 @@ in
       antigravity
       openjdk17
       aapt
-    ]) ++ hyprlandScripts;
+    ]) ++ hyprlandScripts ++ hyprlandUserScripts;
     };
     
     defaultUserShell = pkgs.zsh;
