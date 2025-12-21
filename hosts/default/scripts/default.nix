@@ -19,7 +19,7 @@
   (pkgs.callPackage ./nix-PortalHyprland.nix { })
   (pkgs.callPackage ./nix-Refresh.nix { })
   (pkgs.callPackage ./nix-RefreshNoWaybar.nix { })
-  (pkgs.callPackage ./nix-RofiEmoji.nix { })
+  #(pkgs.callPackage ./nix-RofiEmoji.nix { })
   (pkgs.callPackage ./nix-RofiSearch.nix { })
   (pkgs.callPackage ./nix-RofiThemeSelector-modified.nix { })
   (pkgs.callPackage ./nix-RofiThemeSelector.nix { })
