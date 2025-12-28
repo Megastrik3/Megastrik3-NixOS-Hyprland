@@ -38,7 +38,6 @@ in
       zotero
       termius
       obsidian
-      siril
       darktable
       #davinci-resolve
       pkgs-cuda.davinci-resolve
@@ -50,6 +49,10 @@ in
       antigravity
       openjdk17
       aapt
+      gparted
+      usbutils
+      czkawka
+
     ]) ++ hyprlandScripts ++ hyprlandUserScripts;
     };
     
