@@ -39,7 +39,6 @@ in
       termius
       obsidian
       darktable
-      #davinci-resolve
       pkgs-cuda.davinci-resolve
       handbrake
       r2modman
@@ -49,7 +48,6 @@ in
       antigravity
       openjdk17
       aapt
-      gparted
       usbutils
       czkawka
 
