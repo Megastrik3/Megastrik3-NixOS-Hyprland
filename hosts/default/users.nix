@@ -34,7 +34,7 @@ in
       gimp
       prismlauncher
       bitwarden-desktop
-      vesktop
+      #vesktop
       zotero
       termius
       obsidian
