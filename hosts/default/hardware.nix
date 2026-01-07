@@ -33,6 +33,10 @@
           "users"
           "nofail"
           "exec"
+          "uid=1000" # Your user ID (run 'id -u' to find it)
+          "gid=100"  # Your group ID (run 'id -g' or use 'users' for common group)
+          "fmask=0022" # File permissions (example: full read/write for owner)
+          "dmask=0022" # Directory permissions
         ];
       };
 
