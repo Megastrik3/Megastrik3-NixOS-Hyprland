@@ -50,6 +50,7 @@ in
       aapt
       usbutils
       czkawka
+      neovim
 
     ]) ++ hyprlandScripts ++ hyprlandUserScripts;
     };

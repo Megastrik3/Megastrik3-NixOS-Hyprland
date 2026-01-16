@@ -17,10 +17,13 @@ file_exists() {
 }
 
 # Kill already running processes
-_ps=(waybar rofi swaync ags)
 for _prs in "''${_ps[@]}"; do
   if pidof "''${_prs}" >/dev/null; then
     pkill "''${_prs}"
+    # Wait for the process to actually exit
+    while pidof "''${_prs}" >/dev/null; do
+      sleep 0.1
+    done
   fi
 done
 

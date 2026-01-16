@@ -219,14 +219,14 @@
 
     syncthing = {
       enable = true;
-     # dataDir = "/home/hudsonb";    # Default is /var/lib/syncthing
-    #  configDir = "/home/hudsonb/.config/syncthing"; # Optional: Explicitly set config location
+      dataDir = "/home/hudsonb";    # Default is /var/lib/syncthing
+      configDir = "/home/hudsonb/.config/syncthing"; # Optional: Explicitly set config location
       openDefaultPorts = true;
       overrideDevices = false;
       overrideFolders = false;
       guiAddress = "127.0.0.1:8384";
-      # user = "hudsonb";
-      # group = "users";
+      user = "hudsonb";
+      group = "users";
       # Optional: GUI credentials (can be set in the browser instead)
       extraOptions.gui =
         {

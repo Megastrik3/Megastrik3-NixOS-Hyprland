@@ -1,8 +1,9 @@
 {
-  description = "KooL's NixOS-Hyprland";
+  description = "Megastrik3's NixOS configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager";
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -10,7 +11,7 @@
   };
 
   outputs =
-    inputs@{ self, nixpkgs, ... }:
+    inputs@{ self, nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
       host = "default";
@@ -49,6 +50,12 @@
           modules = [
             ./hosts/${host}/config.nix
             ./modules/quickshell.nix
+            home-manager.nixosModules.home-manager
+            {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.hudsonb = ./home.nix;
+            }
 
             # Import the overlays from the new file
             ({ pkgs, ... }: {

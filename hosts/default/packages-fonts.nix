@@ -99,6 +99,7 @@
     gnome-boxes
     android-studio-full
     waytrogen
+    android-tools
 
     #waybar  # if wanted experimental next line
     #(pkgs.waybar.overrideAttrs (oldAttrs: { mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];}))
@@ -133,8 +134,7 @@ fonts = {
   	  xwayland.enable = true;
     };
 
-    adb.enable = true;
-    direnv.enable = true;
+    direnv.enable = false;
 
     bcc.enable=true;
 	  waybar.enable = true;
