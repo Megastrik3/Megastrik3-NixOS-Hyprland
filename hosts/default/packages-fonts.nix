@@ -89,6 +89,13 @@
     yad
     yt-dlp
 
+    exo
+    mousepad
+    thunar-archive-plugin
+    thunar-volman
+    tumbler
+
+
     devenv
     R
     logitech-udev-rules
@@ -145,13 +152,6 @@ fonts = {
     #neovim.enable = true;
 
 	  thunar.enable = true;
-	  thunar.plugins = with pkgs.xfce; [
-		  exo
-		  mousepad
-		  thunar-archive-plugin
-		  thunar-volman
-		  tumbler
-  	  ];
 	
     virt-manager.enable = false;
     

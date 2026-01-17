@@ -58,7 +58,7 @@
           modules = [
             ./hosts/${host}/config.nix
             ./modules/quickshell.nix
-            ./noctilia/noctilia.nix
+            ./noctalia/noctalia.nix
             home-manager.nixosModules.home-manager
             {
             home-manager.useGlobalPkgs = true;

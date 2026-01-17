@@ -30,7 +30,7 @@ in
     # define user packages here
     packages = (with pkgs; [
       vscode
-      youtube-music
+      pear-desktop
       gimp
       prismlauncher
       bitwarden-desktop

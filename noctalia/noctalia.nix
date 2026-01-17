@@ -41,6 +41,8 @@
                 showIcon = true;
                 showTitle = true;
                 showArtist = false;
+                maximumWidth = 250;
+                hideWhenInactive = true;
               }
             ];
             center = [
@@ -61,7 +63,7 @@
               }
               {
                 id = "Taskbar";
-                showAppIcons = true;
+                showPinnedApps = false;
               }
             ];
             right = [
@@ -297,7 +299,7 @@
           size = 1;
           onlySameOutput = true;
           monitors = [ "HDMI-A-1" ];
-          pinnedApps = [ "Vivaldi" "code" "thunar" ];
+          pinnedApps = [];
           colorizeIcons = false;
           pinnedStatic = false;
           inactiveIndicators = false;
@@ -313,7 +315,7 @@
           bluetoothHideUnnamedDevices = false;
         };
         sessionMenu = {
-          enableCountdown = true;
+          enableCountdown = false;
           countdownDuration = 10000;
           position = "center";
           showHeader = true;
@@ -366,7 +368,7 @@
           sounds = {
             enabled = true;
             volume = 0.5;
-            separateSounds = false;
+            separateSounds = true;
             criticalSoundFile = "";
             normalSoundFile = "";
             lowSoundFile = "";
@@ -455,7 +457,7 @@
           performanceModeDisabled = "";
         };
         desktopWidgets = {
-          enabled = false;
+          enabled = true;
           gridSnap = false;
           monitorWidgets = [ ];
         };

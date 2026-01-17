@@ -228,7 +228,7 @@
       user = "hudsonb";
       group = "users";
       # Optional: GUI credentials (can be set in the browser instead)
-      extraOptions.gui =
+      settings.gui =
         {
           user = "centari";
           password = "password";
