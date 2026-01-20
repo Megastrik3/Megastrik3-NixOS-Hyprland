@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-cuda, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -10,6 +10,27 @@
   home.packages = with pkgs; [
     fortune
     cowsay
+    obs-studio
+    audacity     
+    zoom-us 
+    antigravity
+    openjdk17
+    aapt
+    usbutils
+    czkawka
+    neovim
+    zotero
+    termius
+    obsidian
+    darktable
+    davinci-resolve
+    handbrake
+    vscode
+    pear-desktop
+    gimp
+    prismlauncher
+    bitwarden-desktop
+    r2modman
   ];
 
   # This value determines the Home Manager release that your

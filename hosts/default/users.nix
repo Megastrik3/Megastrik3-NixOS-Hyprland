@@ -29,28 +29,7 @@ in
 
     # define user packages here
     packages = (with pkgs; [
-      vscode
-      pear-desktop
-      gimp
-      prismlauncher
-      bitwarden-desktop
-      #vesktop
-      zotero
-      termius
-      obsidian
-      darktable
-      pkgs-cuda.davinci-resolve
-      handbrake
-      r2modman
-      obs-studio
-      audacity     
-      zoom-us 
-      antigravity
-      openjdk17
-      aapt
-      usbutils
-      czkawka
-      neovim
+
 
     ]) ++ hyprlandScripts ++ hyprlandUserScripts;
     };

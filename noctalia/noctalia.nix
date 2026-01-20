@@ -34,16 +34,31 @@
                 pinToTray = true;
                 pinToTrayIconSize = 16;
                 pinToTraySpacing = 4;
-                pinnedApps = [  "vesktop" "bitwarden" "pear-desktop" "trayscale" "syncthingtray" ];
+                pinnedApps = [
+            "Vesktop"
+            "Bitwarden"
+            "dev.deedles.Trayscale"
+            "syncthingtray"
+          ];
               }
-              {
-                id = "MediaMini";
-                showIcon = true;
-                showTitle = true;
-                showArtist = false;
-                maximumWidth = 250;
-                hideWhenInactive = true;
-              }
+       {
+          compactMode = false;
+          compactShowAlbumArt = true;
+          compactShowVisualizer = false;
+          hideMode = "hidden";
+          hideWhenIdle = false;
+          id = "MediaMini";
+          maxWidth = 250;
+          panelShowAlbumArt = true;
+          panelShowVisualizer = true;
+          scrollingMode = "hover";
+          showAlbumArt = true;
+          showArtistFirst = false;
+          showProgressRing = true;
+          showVisualizer = true;
+          useFixedWidth = false;
+          visualizerType = "linear";
+        }
             ];
             center = [
               {
@@ -372,7 +387,7 @@
             criticalSoundFile = "";
             normalSoundFile = "";
             lowSoundFile = "";
-            excludedApps = "discord,firefox,chrome,chromium,edge";
+            excludedApps = "discord,firefox,chrome,chromium,edge,vesktop,Vesktop";
           };
         };
         osd = {

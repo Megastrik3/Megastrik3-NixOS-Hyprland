@@ -107,6 +107,8 @@
     android-studio-full
     waytrogen
     android-tools
+    toast
+    gpu-screen-recorder-gtk # GUI app
 
     #waybar  # if wanted experimental next line
     #(pkgs.waybar.overrideAttrs (oldAttrs: { mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];}))
@@ -140,6 +142,8 @@ fonts = {
         portalPackage = pkgs.xdg-desktop-portal-hyprland; # xdph none git
   	  xwayland.enable = true;
     };
+
+    gpu-screen-recorder.enable = true; # For promptless recording on both CLI and GUI
 
     direnv.enable = false;
 
